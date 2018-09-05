@@ -4,18 +4,15 @@ import java.time.LocalDate;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import javax.transaction.Transactional;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.formation.MessageRepository;
 import com.formation.dao.MessageDao;
 import com.formation.entity.Message;
-import com.formation.entity.MessageDto;
+import com.formation.model.MessageDto;
 
 @Service
-@Transactional
 public class MessageServiceImpl implements MessageService {
 
 	@Autowired

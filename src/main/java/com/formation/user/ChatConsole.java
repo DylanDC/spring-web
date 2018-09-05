@@ -6,7 +6,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.formation.entity.MessageDto;
+import com.formation.model.MessageDto;
 import com.formation.service.MessageService;
 
 /**

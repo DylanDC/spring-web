@@ -1,4 +1,4 @@
-package com.formation.entity;
+package com.formation.model;
 
 import java.time.LocalDate;
 
