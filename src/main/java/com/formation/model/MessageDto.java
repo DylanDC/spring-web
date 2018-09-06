@@ -18,6 +18,10 @@ public class MessageDto {
 				+ eventTime + "]";
 	}
 
+	public MessageDto() {
+		super();
+	}
+
 	public MessageDto(String fromUser, String toUser, String content, LocalDate eventTime) {
 		super();
 

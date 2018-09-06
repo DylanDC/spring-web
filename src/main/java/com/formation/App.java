@@ -18,7 +18,6 @@ public class App {
 		ApplicationContext applicationContext = new AnnotationConfigApplicationContext(AppConfig.class);
 		ChatConsole interaction = applicationContext.getBean(ChatConsole.class);
 
-		System.out.println(interaction.findMessageSendToAUserADay(name, date));
-		System.out.println(interaction.findAllMessages());
+		interaction.sendGoodbyeTo(name);
 	}
 }
