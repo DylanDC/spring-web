@@ -1,4 +1,4 @@
-package com.formation.dao;
+package com.formation.config;
 
 import javax.sql.DataSource;
 

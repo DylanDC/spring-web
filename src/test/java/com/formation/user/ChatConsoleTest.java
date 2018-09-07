@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import com.formation.AppConfig;
+import com.formation.config.AppConfig;
 
 //Nous fournissons la liste des classes de configuration Spring qui permettront d'avoir le contexte Spring correct dans nos test
 @ContextConfiguration(classes = { AppConfig.class })

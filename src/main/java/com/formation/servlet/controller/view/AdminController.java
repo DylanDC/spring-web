@@ -1,6 +1,5 @@
-package com.formation.servlet;
+package com.formation.servlet.controller.view;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
@@ -12,20 +11,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.formation.MessageValidator;
 import com.formation.model.MessageDto;
-import com.formation.service.MessageService;
+import com.formation.validator.MessageValidator;
 
 @Controller
 @RequestMapping("/admin")
 public class AdminController {
-	@Autowired
-	MessageService serv;
 
 	@RequestMapping(value = "/messages", method = RequestMethod.GET)
 	public ModelAndView adminInterfaceList() {
 		ModelAndView modelAndView = new ModelAndView();
-		modelAndView.addObject("messages", serv.findAllMessages());
 		modelAndView.setViewName("admin/list");
 		return modelAndView;
 	}
@@ -45,7 +40,7 @@ public class AdminController {
 
 			return "admin/create_message";
 		}
-		serv.send(message);
+
 		return "admin/create_message";
 	}
 

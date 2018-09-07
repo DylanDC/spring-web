@@ -1,4 +1,4 @@
-package com.formation;
+package com.formation.validator;
 
 import org.springframework.validation.Errors;
 import org.springframework.validation.ValidationUtils;
@@ -21,12 +21,13 @@ public class MessageValidator implements Validator {
 		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "toUser", "required", "le champ ne doit pas etre vide");
 		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "content", "required", "le champ ne doit pas etre vide");
 
-		MessageDto control = (MessageDto) target;
-		if (!(Character.isUpperCase(control.getFromUser().charAt(0)))) {
-
-			errors.rejectValue("fromUser", "requiered", new Object[] { "'user'" },
-					"Utilisateur a besoin d'une majuscule");
-
-		}
+		// MessageDto control = (MessageDto) target;
+		// if (!(Character.isUpperCase(control.getFromUser().charAt(0)))) {
+		//
+		// errors.rejectValue("fromUser", "requiered", new Object[] { "'user'"
+		// },
+		// "Utilisateur a besoin d'une majuscule");
+		//
+		// }
 	}
 }

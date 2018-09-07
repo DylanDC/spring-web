@@ -5,6 +5,7 @@ import java.time.LocalDate;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
+import com.formation.config.AppConfig;
 import com.formation.user.ChatConsole;
 
 /**

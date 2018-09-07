@@ -11,7 +11,7 @@ import org.springframework.web.context.support.AnnotationConfigWebApplicationCon
 import org.springframework.web.filter.CharacterEncodingFilter;
 import org.springframework.web.servlet.DispatcherServlet;
 
-import com.formation.AppConfig;
+import com.formation.web.config.WebConfig;
 
 public class WebServlet implements WebApplicationInitializer {
 
@@ -19,7 +19,7 @@ public class WebServlet implements WebApplicationInitializer {
 	public void onStartup(ServletContext servletContext) throws ServletException {
 		// Load Spring web application configuration
 		AnnotationConfigWebApplicationContext webContext = new AnnotationConfigWebApplicationContext();
-		webContext.register(AppConfig.class);
+		webContext.register(WebConfig.class);
 		servletContext.addListener(new ContextLoaderListener(webContext));
 		// Create and register the DispatcherServlet
 		DispatcherServlet servlet = new DispatcherServlet(webContext);
